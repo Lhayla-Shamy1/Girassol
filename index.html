@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Para Girassol</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        :root {
+            --primary: #8a2be2; /* roxo brilhante */
+            --primary-dark: #5a1ea1; /* roxo escuro */
+            --primary-light: #d7baff; /* lilás claro */
+            --white: #fff;
+            --light: #f8f5ff; /* quase branco com tom lilás */
+            --dark: #3b1361; /* roxo bem escuro para texto */
+            --shadow: 0 4px 15px rgba(90, 30, 161, 0.3);
+            --sunflower-yellow: #FFC107;
+            --sunflower-brown: #6B4226;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            position: relative;
+            min-height: 100vh;
+            padding-bottom: 80px; /* espaço para rodapé */
+        }
+
+        /* Girassol topo */
+        .sunflower-top {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            opacity: 0.85;
+            pointer-events: none;
+        }
+
+        /* Girassol rodapé */
+        .sunflower-footer {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            width: 60px;
+            height: 60px;
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        /* Cabeçalho */
+        .love-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .love-header h1 {
+            color: var(--primary-dark);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .love-message {
+            font-size: 1.1rem;
+            color: var(--dark);
+            font-style: italic;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.6;
+            text-align: justify; /* texto justificado */
+        }
+
+        /* Galeria */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            aspect-ratio: 1/1;
+        }
+
+        .gallery-item img, .gallery-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Seção de Músicas */
+        .music-section {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+
+        .music-section h2 {
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .spotify-embed {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .spotify-embed iframe {
+            border-radius: 12px;
+            width: 100%;
+            min-height: 80px;
+        }
+
+        /* Mensagens */
+        .love-notes {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .love-notes h2 {
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .note {
+            background-color: var(--primary-light);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            color: var(--primary-dark);
+            text-align: justify; /* texto justificado nas notas */
+            font-weight: 600;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .love-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .sunflower-top {
+                width: 70px;
+                height: 70px;
+            }
+
+            .sunflower-footer {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Girassol topo -->
+    <svg class="sunflower-top" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <circle cx="32" cy="32" r="12" fill="var(--sunflower-brown)"/>
+        <!-- pétalas -->
+        <g stroke="var(--sunflower-yellow)" stroke-width="4" stroke-linecap="round">
+            <line x1="32" y1="4" x2="32" y2="18"/>
+            <line x1="32" y1="46" x2="32" y2="60"/>
+            <line x1="4" y1="32" x2="18" y2="32"/>
+            <line x1="46" y1="32" x2="60" y2="32"/>
+            <line x1="12" y1="12" x2="22" y2="22"/>
+            <line x1="42" y1="42" x2="52" y2="52"/>
+            <line x1="12" y1="52" x2="22" y2="42"/>
+            <line x1="42" y1="22" x2="52" y2="12"/>
+        </g>
+    </svg>
+
+    <div class="main-content">
+        <div class="love-header">
+            <h1>Você é muito forte, Grazzi</h1>
+            <p class="love-message">
+                Eu sei que falhei com você em um dos momentos mais difíceis da sua vida.  
+                Não estive presente quando seu pai partiu, e ainda me afastei, deixando você triste.  
+                Eu me arrependo profundamente disso e quero que saiba que não imagino a dor que você carrega —  
+                uma dor que faz parte de você, mas que também é prova do imenso amor que sentiram um pelo outro.  
+                Pelo que vi no seu relato, seu pai foi um homem incrível, que criou a pessoa maravilhosa que você é hoje.  
+                Sei que hoje a saudade aperta, mas quero que se lembre de que o amor e as memórias dele continuam vivos em você.  
+                Que as lembranças boas aqueçam seu coração e tragam não só lágrimas, mas também sorrisos de gratidão.  
+                Eu estou aqui, desculpa por não estar antes.
+            </p>
+        </div>
+        <!-- Seção de Músicas -->
+        <div class="music-section">
+            <h2>Músicas</h2>
+            <div class="spotify-embed">
+                <!-- Djavan - Amor Puro -->
+                <iframe 
+                  width="300" height="80" 
+                  src="https://www.youtube.com/embed/226lFmu1q3s" 
+                  title="Djavan - Amor Puro" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+                </iframe>
+                <!-- Música 3 -->
+                <iframe 
+                  width="300" height="80" 
+                  src="https://www.youtube.com/embed/kb16AfGm-qI" 
+                  title="Música 3" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+                </iframe>
+                <!-- Música 4 -->
+                <iframe 
+                  width="300" height="80" 
+                  src="https://www.youtube.com/embed/PEmR9PeUSeU" 
+                  title="Música 4" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Mensagens -->
+        <div class="love-notes">
+            <div class="note">
+                <p>Vou mostrar meus arrependimentos com ações.</p>
+            </div>
+            <div class="note">
+                <p>Mesmo distante, sempre carregarei nossa amizade no coração.</p>
+            </div>
+            <div class="note">
+                <p>Prometo estar presente daqui pra frente, de verdade.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Girassol rodapé -->
+    <svg class="sunflower-footer" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <circle cx="32" cy="32" r="12" fill="var(--sunflower-brown)"/>
+        <!-- pétalas -->
+        <g stroke="var(--sunflower-yellow)" stroke-width="4" stroke-linecap="round">
+            <line x1="32" y1="4" x2="32" y2="18"/>
+            <line x1="32" y1="46" x2="32" y2="60"/>
+            <line x1="4" y1="32" x2="18" y2="32"/>
+            <line x1="46" y1="32" x2="60" y2="32"/>
+            <line x1="12" y1="12" x2="22" y2="22"/>
+            <line x1="42" y1="42" x2="52" y2="52"/>
+            <line x1="12" y1="52" x2="22" y2="42"/>
+            <line x1="42" y1="22" x2="52" y2="12"/>
+        </g>
+    </svg>
+</body>
+</html>
